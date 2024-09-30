@@ -10,8 +10,9 @@
     <!-- Header -->
     <header>
         <div class="logo">ProAutomation Consulting</div>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
         <nav>
-            <ul>
+            <ul id="nav-list">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#about">Sobre Nós</a></li>
                 <li><a href="#services">Serviços</a></li>
@@ -20,6 +21,7 @@
             </ul>
         </nav>
     </header>
+    
 
     <!-- Banner Principal -->
     <section id="home" class="banner">
@@ -216,5 +218,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('menu-open');
+        });
+    </script>
+    
 </body>
 </html>
